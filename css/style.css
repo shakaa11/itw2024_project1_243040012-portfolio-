@@ -7,81 +7,54 @@ body {
 }
 
 /* navigasi */
-nav {
-  display: flex;
-  /* border: 1px solid black; */
-  position: fixed;
-  align-items: center;
-  flex-direction: row;
-  background: transparent;
-  overflow: hidden;
-  top: 0;
-  width: 100%;
-  z-index: 1;
-}
-
 html {
   scroll-behavior: smooth;
 }
 
-.logo {
-  width: 60%;
-  /* border: 1px solid black; */
-  padding-left: 200px;
-  padding-top: 20px;
-  padding-bottom: 10px;
-  font-size: 80%;
-  cursor: pointer;
+header a {
+  text-decoration: none;
 }
-
-.list {
-  width: 30%;
-}
-
-.list ul  {
-  /* border: 1px solid black; */
+header {
+  padding: 0 20px;
+  background-color: #1d1d1d;
+  height: 50px;
   display: flex;
-  justify-content: space-around;
-  position: relative;
-  width: 70%;
-  font-size: 80%;
-  left: -45%;
+  justify-content: space-between;
 }
 
-ul li a {
- color:  rgb(222, 222, 64);
- font-family: arial;
- text-decoration: none;
- position: relative;
- padding: 5px 5px;
- font-size: 14px;
- display: block;
+#brand {
+  font-weight: bold;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
 }
 
-
-ul li a::after {
-    content: '';
-    position: absolute;
-    left: 0px;
-    bottom: 0px;
-    width: 100%;
-    height: 4px;
-    background-color: #fefefe;
-    transform-origin: bottom right;
-    transition: transfrom 0.5s ease;
-    transform: scaleX(0);
+#brand a {
+  color: rgb(222, 222, 64);
+  margin-left: 200px;
 }
 
-ul li a:hover {
-  transform-origin: bottom left;
+ul {
+  list-style: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  /* justify-content: space-around; */
+  margin-left: -300px;
+}
+
+ul a {
+  color: rgb(222, 222, 64);
+}
+
+ul li {
+  padding: 5px;
+  margin-left: 10px;
+}
+
+ul li:hover {
   transform: scale(1.1);
-  color: #fff;
-}
-
-.icon {
-  width: 25px;
-  margin-left: 155%;
-  margin-top: -60%;
+  transition: 0.3s;
 }
 /* navigasi end */
 
@@ -107,7 +80,6 @@ span {
   /* height: 500px; */
   margin: 2%;
 }
-
 
 .gambar {
   width: 290px;
@@ -138,7 +110,7 @@ span {
   height: 200px;
 }
 
-header {
+.saya {
   text-align: center;
   margin-bottom: 100px;
 }
@@ -256,6 +228,7 @@ header {
   margin-top: 100px;
   padding: 6%;
 }
+
 .card {
   width: 325px;
   background-color: #f0f0f0;
@@ -264,22 +237,27 @@ header {
   box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
   margin: 20px;
 }
+
 .card img {
   width: 100%;
   height: auto;
 }
+
 .card-content {
   padding: 16px;
 }
+
 .card-content h3 {
   font-size: 28px;
   margin-bottom: 8px;
 }
+
 .card-content p {
   color: grey;
   font-size: 15px;
   line-height: 1.3;
 }
+
 .card-content .btn {
   display: inline-block;
   padding: 8px 16px;
@@ -304,6 +282,7 @@ header {
   font-size: 20px;
 }
 /* end */
+
 
 /* Contact start */
 section.contact {
@@ -373,6 +352,7 @@ section.contact {
   color: rgb(222, 222, 64);
   font-size: 1rem;
   font-family: "poppins";
+  /* margin-left: 300px; */
 }
 
 .right-container {
@@ -530,27 +510,25 @@ textarea {
 
 /* Responsive Tablet*/
 @media screen and (max-width: 768px) {
-  nav ul {
-    width: 50%;
+  header nav  {
+    width: 10%;
     
+  }
+  #brand a {
+    margin-left: 50px;
+  }
+
+  ul {
+    margin-left: -350px;
+  }
+
+  .logo {
+    width: 300px;
   }
 
   .content {
     width: 100%;
     margin-left: -29%;
-  }
-
-  .logo {
-    margin-left: -90px;
-  }
-
-  .icon {
-    margin-left: 550px;
-  }
-
-  .list {
-    margin-left: 70px;
-    margin-top: 25px;
   }
 
   .img {
@@ -599,16 +577,86 @@ textarea {
   }
 } 
 
-/* Mobile */
-@media screen and (max-width: 576px) {
+/* hamburger menu */
+#hamburger-icon {
+  margin: auto 0;
+  display: none;
+  cursor: pointer;
+}
+#hamburger-icon div {
+  width: 35px;
+  height: 3px;
+  background-color: yellow;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+.open .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+  transform: rotate(-45deg) translate(-6px, 6px);
+}
+.open .bar2 {
+  opacity: 0;
+}
+.open .bar3 {
+  -webkit-transform: rotate(45deg) translate(-6px, -8px);
+  transform: rotate(45deg) translate(-6px, -8px);
+}
+.open .mobile-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: grey;
+  width: 100px;
+  height: 270px;
+  margin-left: 223px;
+  margin-top: 1px;
+  border-radius: 3px;
+  transition: all 0.6s;
+}
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 160px;
+  height: calc(100vh - 50px);
+  width: 100%;
+}
+.mobile-menu li {
+  margin-bottom: 50px;
+}
 
-  nav ul {
-    width: 50%;
+.logo2 {
+  margin: 25px;
+  width: 10%;
+  margin-top: -50px;  
+  cursor: pointer;
+}
+/* end */
+
+
+/* Mobile */
+@media only screen and (max-width: 600px) {
+  header nav {
+    display: none;
+  }
+  
+
+  #hamburger-icon {
+    display: block;
+  }
+  ul {
+    margin-left: 20px;
+    justify-content: space-around;
+  }
+  #brand a {
+    margin-left: 50px;
   }
 
+  
   .content {
     width: 100%;
-    margin-left: -35%;
+    margin-left: -50%;
     display: flex;
     flex-direction: row;
   }
@@ -622,9 +670,9 @@ textarea {
   }
 
   .img {
-    margin-top: 220px;
+  margin-top: 220px;
    width: 100px;
-   margin-left: -290px;
+   margin-left: -155px;
   }
 
   .gambar {
