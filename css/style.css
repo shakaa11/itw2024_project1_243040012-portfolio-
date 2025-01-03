@@ -73,6 +73,7 @@ span {
   padding: 20%;
   padding-left: 300px;
   color: white;
+  margin-top: -20px;
 }
 
 .img {
@@ -82,11 +83,11 @@ span {
 }
 
 .gambar {
-  width: 290px;
+  width: 270px;
   margin: 50%;
   margin-left: -50%;
   border-radius: 50%;
-  height: 50%;
+  height: 40%;
   box-shadow: 0 0 7px 0 white;
   border: 3px solid rgb(222, 222, 64) ;
 }
@@ -526,6 +527,10 @@ textarea {
     width: 300px;
   }
 
+  .home-scl {
+    display: flex;
+  }
+
   .content {
     width: 100%;
     margin-left: -29%;
@@ -583,6 +588,7 @@ textarea {
   display: none;
   cursor: pointer;
 }
+
 #hamburger-icon div {
   width: 35px;
   height: 3px;
@@ -590,17 +596,21 @@ textarea {
   margin: 6px 0;
   transition: 0.4s;
 }
+
 .open .bar1 {
   -webkit-transform: rotate(-45deg) translate(-6px, 6px);
   transform: rotate(-45deg) translate(-6px, 6px);
 }
+
 .open .bar2 {
   opacity: 0;
 }
+
 .open .bar3 {
   -webkit-transform: rotate(45deg) translate(-6px, -8px);
   transform: rotate(45deg) translate(-6px, -8px);
 }
+
 .open .mobile-menu {
   display: flex;
   flex-direction: column;
@@ -614,6 +624,7 @@ textarea {
   border-radius: 3px;
   transition: all 0.6s;
 }
+
 .mobile-menu {
   display: none;
   position: absolute;
@@ -622,6 +633,7 @@ textarea {
   height: calc(100vh - 50px);
   width: 100%;
 }
+
 .mobile-menu li {
   margin-bottom: 50px;
 }
@@ -633,6 +645,77 @@ textarea {
   cursor: pointer;
 }
 /* end */
+
+.home-scl {
+  margin: 30px 0 50px;
+}
+
+.home-scl a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  font-size: 20px;
+  color: yellow;
+  margin-left: 12px;
+  transition: 0.5s;
+}
+
+.home-scl a:hover {
+  background: white;
+  color: red;
+  border-color: yellow;
+  box-shadow: 0 0 10px yellow;
+  transform: scale(1.1);
+}
+
+.home-scl2 {
+  margin: 30px 0 50px;
+}
+
+.home-scl2 a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  font-size: 20px;
+  color: yellow;
+  margin-left: 30px;
+  transition: 0.5s;
+}
+
+.home-scl2 a:hover {
+  background: white;
+  color: red;
+  border-color: yellow;
+  box-shadow: 0 0 10px yellow;
+  transform: scale(1.1);
+}
+
+.no1 {
+  font-size: 7px;
+  text-align: center;
+  margin-left: -50px;
+  margin-top: 10px;
+  color: grey;
+  cursor: pointer;
+}
+
+.no2 {
+  font-size: 7px;
+  margin-left: 100px;
+  margin-top: -22px;
+  color: grey;
+  cursor: pointer;
+}
 
 
 /* Mobile */
@@ -677,11 +760,17 @@ textarea {
 
   .gambar {
     width: 200px;
+    margin-top: 100px;
+    margin-left: -60px;
   }
 
   .gambar2 {
     width: 200px;
     margin-left: 5%;
+  }
+
+  .home-scl {
+    display: flex;
   }
 
   .container  {
